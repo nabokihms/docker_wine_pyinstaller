@@ -10,7 +10,7 @@ RUN dpkg --add-architecture i386 \
     && apt-get update && apt-get install -qfy --no-install-recommends \
         wget software-properties-common  apt-transport-https\
     && wget -nc https://dl.winehq.org/wine-builds/winehq.key \
-    && sudo apt-key add winehq.key \
+    && apt-key add winehq.key \
     && apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/' \
     && apt-get update && apt-get install -qfy --no-install-recommends \
         winehq-staging \

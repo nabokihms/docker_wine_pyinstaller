@@ -25,7 +25,7 @@ ENV WINEDEBUG -all
 ENV WINEPREFIX /wine
 
 # install python3 and pyinstaller
-RUN winetricks win10 \
+RUN winetricks win7 \
     && wget -A msi -m -p -E -k -K -np \
         "https://www.python.org/ftp/python/${PY_VER}/amd64/" \
     && cd www.python.org/ftp/python/${PY_VER}/amd64/ \
